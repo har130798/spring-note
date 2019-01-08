@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NoterApplication",
+            "request": "launch",
+            "mainClass": "com.noteapp.noter.NoterApplication",
+            "projectName": "noter"
+        }
+    ]
+}
