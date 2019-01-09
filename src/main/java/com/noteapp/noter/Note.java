@@ -1,9 +1,9 @@
 package com.noteapp.noter;
 
-import java.sql.Date;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.annotation.Generated;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,15 +13,23 @@ import lombok.Data;
 @Data //Lombok annotation for boilerplate code
 @Entity //JPA annotation denotes that the whole class is for storage in a relational table.
 
-public class Note {
+public class Note implements Serializable{
+
+    private static final long serialVersionUID = -3009157732242241606L;//What's this for?
 
     // Id denotes primary-key and generated value is telling that it's automatically generated.
     private @Id @GeneratedValue Long noteId; 
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "body")
     private String body;
+
+    @Column(name = "createdate")
     private LocalDate createDate;
 
-    private Note() {}
+    private Note() {} //is this necessary?
 
     public Note (String title, String body) {
         this.body = body;
