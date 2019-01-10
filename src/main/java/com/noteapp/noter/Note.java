@@ -15,8 +15,6 @@ import lombok.Data;
 
 public class Note implements Serializable{
 
-    private static final long serialVersionUID = -3009157732242241606L;//What's this for?
-
     // Id denotes primary-key and generated value is telling that it's automatically generated.
     private @Id @GeneratedValue Long noteId; 
 
@@ -35,6 +33,10 @@ public class Note implements Serializable{
         this.body = body;
         this.title = title;
         this.createDate = LocalDate.now();
+    }
+
+    public Long getId() {
+        return this.noteId;
     }
 
 }

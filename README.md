@@ -13,6 +13,7 @@ PostgreSQL
 + JPA
 + Thymeleaf
 + H2 (Not required anymore? `unsure`)
-+ REST repositories 
++ REST repositories (not used anymore) 
 + Lombok
 + Postgres
++ Hateoas
