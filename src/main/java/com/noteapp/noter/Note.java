@@ -7,12 +7,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.Data;
 
 @Data //Lombok annotation for boilerplate code
 @Entity //JPA annotation denotes that the whole class is for storage in a relational table.
-
+@Table(name = "note")
 public class Note implements Serializable{
 
     // Id denotes primary-key and generated value is telling that it's automatically generated.
